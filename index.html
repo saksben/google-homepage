@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <!--This is a learning experience. As such, my process to make
+    this was to first try on my own, then to use Inspect on the
+    actual site and copy it so that I could learn how to do it-->
+    <head>
+        <title>Google</title>
+        <style>
+            html,
+
+            body {
+                
+            }
+
+            #page-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a { 
+                display: block;
+                padding: 14px 16px;
+                background-color: white;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+                    </li>
+                    <li>
+                        <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+                    </li>
+                    <li>
+                        <a href="https://mail.google.com">Gmail</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="page-wrap">
+                <div id="logo">
+                    <img id="logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                    alt="Google image">
+                </div>
+                <div id="search-area">
+                    <form>
+                        <input id="search-input" name="search-input" type="text">
+                        <div id="buttons">
+                            <input id="google-search" type="submit" value="Google Search">
+                            <input id="lucky" type="submit" value="I'm Feeling Lucky">
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                    </li>
+                    <li>
+                        <a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a>
+                    </li>
+                    <li>
+                        <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
