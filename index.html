@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <!--This is a learning experience. As such, my process to make
-    this was to first try on my own, then to use Inspect on the
-    actual site and copy it so that I could learn how to do it-->
     <head>
         <title>Google</title>
         <style>
-            html,
 
             body {
-                
+               font-family: sans-serif; 
             }
 
             #page-wrap {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+            }
+
+            #nav-1 {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                position: fixed;
+            }
+
+            #container {
+                margin-top: 200px;
+                margin-bottom: 100px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -38,66 +54,129 @@
                 text-decoration: none;
             }
 
+            #search-wrap {
+                height: 30px;
+                width: 400px;
+                margin-top: 25px;
+                padding: 5px 20px 5px 20px;
+                display: flex;
+                border: solid silver 1.5px;
+                border-radius: 30px;
+                box-shadow: 0px 5px 5px silver;
+            }
+
+            .icon {
+                height: 30px;
+                width: 30px;
+            }
+
+            #search-input {
+                width: 100%;
+                border: none;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-buttons {
+                border: none;
+                margin-top: 20px;
+                margin-right: 10px;
+                padding: 10px;
+            }
+
+
+            #nav-2 {
+                position: fixed;
+                bottom: 0px;
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                background-color: #eee;
+                align-items: center;
+            }
+
+            .footer {
+                background-color: #eee;
+                color: gray;
+            }
+
 
         </style>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
-                    </li>
-                    <li>
-                        <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
-                    </li>
-                    <li>
-                        <a href="https://mail.google.com">Gmail</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <div id="page-wrap">
-                <div id="logo">
-                    <img id="logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-                    alt="Google image">
-                </div>
-                <div id="search-area">
-                    <form>
-                        <input id="search-input" name="search-input" type="text">
-                        <div id="buttons">
-                            <input id="google-search" type="submit" value="Google Search">
-                            <input id="lucky" type="submit" value="I'm Feeling Lucky">
-                        </div>
-                    </form>
-                </div>
+            <header>
+                <nav id="nav-1">
+                    <ul id="header-1">
+                        <li>
+                            <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+                        </li>
+                        <li>
+                            <a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+                        </li>
+                    </ul>
+                    <ul id="header-2">
+                        <li>
+                            <a href="https://mail.google.com">Gmail</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                    <div id="logo">
+                        <img id="logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                        alt="Google logo">
+                    </div>
+                    <div id="search-area">
+                        <form>
+                            <div id="search-wrap">
+                                <div id="icon-search"><img class="icon" src="icons/outline_search_black_24dp.png"></div>
+                                <input id="search-input" name="search-input" type="text">
+                                <div id="icon-microphone"><img class="icon" src="icons/outline_mic_black_24dp.png"></div>
+                            </div>
+                            <div id="search-buttons">
+                                <input class="search-buttons" id="google-search" type="submit" value="Google Search">
+                                <input class="search-buttons" id="lucky" type="submit" value="I'm Feeling Lucky">
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            <div id="space-1"></div>
+            <div id="space-2"></div>
+            <footer>
+                <nav id="nav-2">
+                    <ul id="footer-1">
+                        <li>
+                            <a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" class="footer">Advertising</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" class="footer">Business</a>
+                        </li>
+                        <li>
+                            <a href="https://google.com/search/howsearchworks/?fg=1" class="footer">How Search Works</a>
+                        </li>
+                    </ul>
+                    <ul id="footer-2">
+                        <li>
+                            <a href="https://policies.google.com/privacy?hl=en&fg=1" class="footer">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="https://policies.google.com/terms?hl=en&fg=1" class="footer">Terms</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footer">Settings</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
         </div>
-        <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
-                    </li>
-                    <li>
-                        <a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a>
-                    </li>
-                    <li>
-                        <a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
-                    </li>
-                    <li>
-                        <a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Settings</a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
     </body>
 </html>
